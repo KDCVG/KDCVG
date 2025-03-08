@@ -2666,17 +2666,80 @@
         <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">Reference content and script generation for SAR.</h3>
         <h4
           style="border:2px solid rgb(0, 0, 0); padding:10px; font-family:'Segoe Print', sans-serif; color:rgb(0, 0, 0); font-size:18px;">
-          <span class="prompts">Reference:</span><br>
-          <span class="prompts1">1. A man rides a bicycle on a beautiful tropical beach at sunset of 4k high
-            resolution.</span><br>
-          <span class="prompts2">2. A man walks on a beautiful tropical beach at sunset of 4k high
-            resolution.</span><br>
-          <span class="prompts3">3. A man reads a book on a beautiful tropical beach at sunset of 4k high
-            resolution.</span>
+          
+          <span class="prompts">Input Selling Points: </span><br>
+          <span class="prompts1">Diverse Fruit Aroma, Babies Love It at First Use.</span><br>
+          <span class="prompts">Reference Script: </span><br>
+          <span class="prompts2">A stream of water is poured into the glass, 
+            causing the tea leaves to swirl around in the 
+            liquid.</span><br>
+            <span class="prompts">Generation Script:</span><br>
+          <span class="prompts2">A refreshing blend of fruit juices being 
+            poured into a glass, filling the air with a 
+            sweet aroma that instantly delights babies.</span><br>
         </h4>
+
+        <h4
+          style="border:2px solid rgb(0, 0, 0); padding:10px; font-family:'Segoe Print', sans-serif; color:rgb(0, 0, 0); font-size:18px;">
+          
+          <span class="prompts">Input Selling Points: </span><br>
+          <span class="prompts1"> Cool and Refreshing.</span><br>
+          <span class="prompts">Reference Script: </span><br>
+          <span class="prompts2">Two women are holdingglasses of wine and 
+            drinking.</span><br>
+            <span class="prompts">Generation Script:</span><br>
+          <span class="prompts2">Two women are holding glasses of chilled 
+            lemonade, sipping and enjoying the cool, 
+            refreshing taste on a sunny day.</span><br>
+        </h4>
+
+        <h4
+          style="border:2px solid rgb(0, 0, 0); padding:10px; font-family:'Segoe Print', sans-serif; color:rgb(0, 0, 0); font-size:18px;">
+          
+          <span class="prompts">Input Selling Points: </span><br>
+          <span class="prompts1">Herbal Fragrance, Fresh Breath</span><br>
+          <span class="prompts">Reference Script: </span><br>
+          <span class="prompts2"> A person's hand is disturbing the water, 
+            causing ripples and splashes.</span><br>
+            <span class="prompts">Generation Script:</span><br>
+          <span class="prompts2">A person's hand is gently stirring a cup of 
+            herbal tea, causing ripplesthat release a 
+            calming fragrance, leaving a refreshing 
+            sensation with every splash.</span><br>
+        </h4>
+
+
+        <style>
+          /* 通用提示样式 */
+          .prompts {
+            color: #000000; /* 黑色 */
+            font-weight: bold; /* 加粗 */
+          }
         
-        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">Demonstrating preservation of motion priors in MKR.</h3>
-        <div class="video-grid">
+          /* 第一个提示的样式 */
+          .prompts1 {
+            color: #FF5733; /* 橙色 */
+            font-style: italic; /* 斜体 */
+          }
+        
+          /* 第二个提示的样式 */
+          .prompts2 {
+            color: #33A1FF; /* 蓝色 */
+            font-style: normal; /* 正常字体 */
+          }
+        </style>
+
+        
+        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">Importance of MR-LoRA in MKR.</h3>
+        <div id="results-carousel" class="video-grid2">
+          <div class="video-item2">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static\videos\MR-LoRA.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- <div class="video-grid">
           <div class="video-item">
             <video poster="" id="video4" autoplay controls muted loop>
               <source src="videos\multi\VidRD.mp4" type="video/mp4">
@@ -2701,7 +2764,7 @@
             </video>
             <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-3</p>
           </div>
-          <!-- <div class="video-item">
+          <div class="video-item">
             <video poster="" id="video8" autoplay controls muted loop>
               <source src="videos\multi\CoNo.mp4" type="video/mp4">
             </video>
@@ -2712,8 +2775,8 @@
               <source src="videos\multi\Ours.mp4" type="video/mp4">
             </video>
             <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-5</p>
-          </div> -->
-        </div>
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -2733,7 +2796,7 @@
             <source src="static/videos/video-18-2.mp4" type="video/mp4">
             sorry, your browser does not support HTML5 Videos.
           </video>
-          <p class="text-white">Candle burning in dark room.</p>
+          <!-- <p class="text-white">Candle burning in dark room.</p> -->
         </div>
         <div class="marquee-item">
           <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" class="lozad" autoplay="" muted=""
@@ -2741,7 +2804,7 @@
             <source src="static/videos/video-8-2.mp4" type="video/mp4">
             sorry, your browser does not support HTML5 Videos.
           </video>
-          <p class="text-white">A drone view of celebration with fireworks, starry sky - background.</p>
+          <!-- <p class="text-white">A drone view of celebration with fireworks, starry sky - background.</p> -->
         </div>
         <div class="marquee-item">
           <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" class="lozad" autoplay="" muted=""
@@ -2749,7 +2812,7 @@
             <source src="static/videos/video-4.mp4" type="video/mp4">
             sorry, your browser does not support HTML5 Videos.
           </video>
-          <p class="text-white">A horse bending down to drink water from a river.</p>
+          <!-- <p class="text-white">A horse bending down to drink water from a river.</p> -->
         </div>
         <div class="marquee-item">
           <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" class="lozad" autoplay="" muted=""
@@ -2757,7 +2820,7 @@
             <source src="static/videos/video-4-2.mp4" type="video/mp4">
             sorry, your browser does not support HTML5 Videos.
           </video>
-          <p class="text-white">Yoda playing guitar on the stage.</p>
+          <!-- <p class="text-white">Yoda playing guitar on the stage.</p> -->
         </div>
         <div class="marquee-item">
           <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" class="lozad" autoplay="" muted=""
@@ -2765,16 +2828,15 @@
             <source src="static/videos/sample_0000-28.mp4" type="video/mp4">
             sorry, your browser does not support HTML5 Videos.
           </video>
-          <p class="text-white">A beautiful coastal beach in spring, waves lapping on sand, with an intense shaking
-            effect.</p>
+          <!-- <p class="text-white">A beautiful coastal beach in spring, waves lapping on sand, with an intense shaking effect.</p> -->
         </div>
         <div class="marquee-item">
           <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" class="lozad" autoplay="" muted=""
             loop="" playsinline="" height="100%">
-            <source src="static/videos/video-5.mp4" type="video/mp4">
+            <source src="static/videos/video-27-2.mp4" type="video/mp4">
             sorry, your browser does not support HTML5 Videos.
           </video>
-          <p class="text-white">A man wearing a helmet riding a bicycle on the road.</p>
+          <!-- <p class="text-white">A man wearing a helmet riding a bicycle on the road.</p> -->
         </div>
 
 
