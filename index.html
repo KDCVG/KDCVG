@@ -2215,7 +2215,7 @@
 <body>
   <div id="MathJax_Message" style="display: none;"></div>
 
-  <section class="hero">
+  <section class="hero2">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -2234,6 +2234,69 @@
       </div>
     </div>
   </section>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /* Hero Section 样式 */
+    .hero2 {
+      /* background-image: url('static/videos/carousel2.jpg'); */
+      background-size: cover; /* 背景图覆盖整个区域 */
+      background-position: center; /* 背景图居中 */
+      background-repeat: no-repeat; /* 不重复背景图 */
+      /* padding: 4rem 1.5rem; */
+      color: #412929; /* 文字颜色（白色） */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影，增强可读性 */
+    }
+  
+    /* 标题样式 */
+    .hero2 .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    /* 作者信息样式 */
+    .hero2 .publication-authors {
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+  </style>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Creative Generation (CG) leverages generative models to automatically produce advertising content that highlights 
+              product features, and it has been a significant focus of recent research. However, while CG has advanced considerably, 
+              most efforts have concentrated on generating advertising text and images, leaving Creative Video Generation (CVG) 
+              relatively underexplored. This gap is largely due to two major challenges faced by Text-to-Video (T2V) models: 
+              (a) ambiguous semantic alignment, where models struggle to accurately correlate product selling points with 
+              creative video content, and (b) inadequate motion adaptability, resulting in unrealistic movements and distortions. 
+              To address these challenges, we develop a comprehensive Advertising Creative Knowledge Base (ACKB) as a foundational 
+              resource and propose a knowledge-driven approach (KD-CVG) to overcome the knowledge limitations of existing models. 
+              KD-CVG consists of two primary modules: Semantic-Aware Retrieval (SAR) and Multimodal Knowledge Reference (MKR). 
+              SAR utilizes the semantic awareness of graph attention networks and reinforcement learning feedback to enhance 
+              the model's comprehension of the connections between selling points and creative videos. Building on this, MKR 
+              incorporates semantic and motion priors into the T2V model to address existing knowledge gaps. Extensive experiments 
+              have demonstrated KD-CVG's superior performance in achieving semantic alignment and motion adaptability, validating 
+              its effectiveness over other state-of-the-art methods. 
+              The code and dataset will be open source at https://kdcvg.github.io/KDCVG/.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
 
   
   <!-- Video carousel -->
@@ -2490,37 +2553,6 @@
     </div>
   </section> -->
 
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Creative Generation (CG) leverages generative models to automatically produce advertising content that highlights 
-              product features, and it has been a significant focus of recent research. However, while CG has advanced considerably, 
-              most efforts have concentrated on generating advertising text and images, leaving Creative Video Generation (CVG) 
-              relatively underexplored. This gap is largely due to two major challenges faced by Text-to-Video (T2V) models: 
-              (a) ambiguous semantic alignment, where models struggle to accurately correlate product selling points with 
-              creative video content, and (b) inadequate motion adaptability, resulting in unrealistic movements and distortions. 
-              To address these challenges, we develop a comprehensive Advertising Creative Knowledge Base (ACKB) as a foundational 
-              resource and propose a knowledge-driven approach (KD-CVG) to overcome the knowledge limitations of existing models. 
-              KD-CVG consists of two primary modules: Semantic-Aware Retrieval (SAR) and Multimodal Knowledge Reference (MKR). 
-              SAR utilizes the semantic awareness of graph attention networks and reinforcement learning feedback to enhance 
-              the model's comprehension of the connections between selling points and creative videos. Building on this, MKR 
-              incorporates semantic and motion priors into the T2V model to address existing knowledge gaps. Extensive experiments 
-              have demonstrated KD-CVG's superior performance in achieving semantic alignment and motion adaptability, validating 
-              its effectiveness over other state-of-the-art methods. 
-              The code and dataset will be open source at https://kdcvg.github.io/KDCVG/.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End paper abstract -->
-
 
   <!-- Paper abstract -->
   <section class="section hero">
@@ -2553,40 +2585,88 @@
     <div class="hero-body">
       <div class="container">
         <h2 class="title is-3">Comparison with other methods&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">1. Single-prompt
-          Longer Video Generation</h3>
-        <div id="results-carousel" class="carousel results-carousel">
+        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">KD-CVG significantly improved movement regularity.</h3>
+        <!-- <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-video1">
             <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="videos\compare\piano.mp4" type="video/mp4">
+              <source src="static\videos\video-27.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-video2">
             <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="videos\compare\motor.mp4" type="video/mp4">
+              <source src="static\videos\video-8.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-video3">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">\
-              <!-- Your video file here -->
-              <source src="videos\compare\cat.mp4" type="video/mp4">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <source src="static\videos\video-18.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-video3">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">\
-              <!-- Your video file here -->
-              <source src="videos\compare\candle.mp4" type="video/mp4">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <source src="static\videos\video-16.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div> -->
+        <div id="results-carousel" class="video-grid2">
+          <div class="video-item2">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static\videos\video-27.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <source src="static\videos\video-8.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item2">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <source src="static\videos\video-18.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item2">
+            <video poster="" id="video4" autoplay controls muted loop height="100%">
+              <source src="static\videos\video-16.mp4" type="video/mp4">
             </video>
           </div>
         </div>
+        
+        <style>
+          /* 视频网格容器 */
+          .video-grid2 {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            gap: 16px;
+            /* align-items: center; */
+          }
+        
+          /* 单个视频项 */
+          .video-item2 {
+            width: 93%; /* 每个视频占据100%宽度 */
+            /* max-width: 800px;  */
+            box-sizing: border-box;
+          }
+        
+          /* 视频元素 */
+          video {
+            width: 100%; /* 视频宽度占满容器 */
+            height: auto; /* 高度自适应 */
+            border-radius: 8px; /* 圆角效果 */
+          }
+        </style>
+      </div>
+    </div>
+  </section>
 
-        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">2. Multi-prompt
-          Longer Video Generation</h3>
+    
+  <section class="section hero">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Ablation Studies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">Reference content and script generation for SAR.</h3>
         <h4
           style="border:2px solid rgb(0, 0, 0); padding:10px; font-family:'Segoe Print', sans-serif; color:rgb(0, 0, 0); font-size:18px;">
-          <span class="prompts">Prompts:</span><br>
+          <span class="prompts">Reference:</span><br>
           <span class="prompts1">1. A man rides a bicycle on a beautiful tropical beach at sunset of 4k high
             resolution.</span><br>
           <span class="prompts2">2. A man walks on a beautiful tropical beach at sunset of 4k high
@@ -2594,44 +2674,45 @@
           <span class="prompts3">3. A man reads a book on a beautiful tropical beach at sunset of 4k high
             resolution.</span>
         </h4>
-
+        
+        <h3 style="margin-top:30px; margin-bottom:10px; color:rgb(133, 130, 130); font-size:24px;">Demonstrating preservation of motion priors in MKR.</h3>
         <div class="video-grid">
           <div class="video-item">
             <video poster="" id="video4" autoplay controls muted loop>
               <source src="videos\multi\VidRD.mp4" type="video/mp4">
             </video>
-            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">VidRD</p>
+            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Reference</p>
           </div>
           <div class="video-item">
             <video poster="" id="video5" autoplay controls muted loop>
               <source src="videos\multi\GenL.mp4" type="video/mp4">
             </video>
-            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">GenL</p>
+            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-1</p>
           </div>
           <div class="video-item">
             <video poster="" id="video6" autoplay controls muted loop>
               <source src="videos\multi\FreeNoise.mp4" type="video/mp4">
             </video>
-            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">FreeNoise</p>
+            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-2</p>
           </div>
           <div class="video-item">
             <video poster="" id="video7" autoplay controls muted loop>
               <source src="videos\multi\MTVG.mp4" type="video/mp4">
             </video>
-            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">MTVG</p>
+            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-3</p>
           </div>
-          <div class="video-item">
+          <!-- <div class="video-item">
             <video poster="" id="video8" autoplay controls muted loop>
               <source src="videos\multi\CoNo.mp4" type="video/mp4">
             </video>
-            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">CoNo</p>
+            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-4</p>
           </div>
           <div class="video-item">
             <video poster="" id="video9" autoplay controls muted loop>
               <source src="videos\multi\Ours.mp4" type="video/mp4">
             </video>
-            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Ours</p>
-          </div>
+            <p style="color: rgb(0, 0, 0); font-size: 20px; font-weight: 530;">Video-5</p>
+          </div> -->
         </div>
       </div>
     </div>
